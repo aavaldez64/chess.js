@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.board,
+.board-pieces {
+  @apply grid grid-cols-8 grid-rows-8 w-[calc(5rem*8)] h-[calc(5rem*8)] border-2 border-white;
+}
+
+.board > div {
+  @apply size-20;
+}
+
+/* Board Color Tiles */
+.board > div:nth-child(2n + 1) {
+  @apply bg-white;
+}
+.board > div:nth-child(2n) {
+  @apply bg-black;
+}
+
+.board > div:nth-child(2n + 9) {
+  @apply bg-black;
+}
+.board > div:nth-child(2n + 10) {
+  @apply bg-white;
+}
+
+.board > div:nth-child(2n + 18) {
+  @apply bg-black;
+}
+.board > div:nth-child(2n + 17) {
+  @apply bg-white;
+}
+
+.board > div:nth-child(2n + 25) {
+  @apply bg-black;
+}
+.board > div:nth-child(2n + 26) {
+  @apply bg-white;
+}
+
+.board > div:nth-child(2n + 34) {
+  @apply bg-black;
+}
+.board > div:nth-child(2n + 33) {
+  @apply bg-white;
+}
+
+.board > div:nth-child(2n + 41) {
+  @apply bg-black;
+}
+.board > div:nth-child(2n + 42) {
+  @apply bg-white;
+}
+
+.board > div:nth-child(2n + 50) {
+  @apply bg-black;
+}
+.board > div:nth-child(2n + 49) {
+  @apply bg-white;
+}
+
+.board > div:nth-child(2n + 57) {
+  @apply bg-black;
+}
+.board > div:nth-child(2n + 58) {
+  @apply bg-white;
+}
+
+.board-pieces > div {
+  @apply size-full p-4;
+}
+.board-pieces > div > div {
+  @apply size-full border-2 cursor-pointer;
+}
+
+.board-pieces > div > img {
+  @apply size-full border-0 cursor-pointer;
+}
+
+.board-pieces > div > img.black {
+  filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 1));
+}
